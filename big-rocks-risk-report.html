@@ -78,6 +78,7 @@
     .area-btn .dot.coral  { background: #ff5630; }
     .area-btn .dot.lav    { background: #8270db; }
     .area-btn .dot.lime   { background: #65a30d; }
+    .area-btn .dot.sky    { background: #0ea5e9; }
 
     .status-badge.blocked { background: #ffe0d6; color: #b92500; }
     .status-badge.blocked::before { background: #b92500; }
@@ -222,7 +223,7 @@
 <header>
   <div class="header-left">
     <h1>Big Rock - Risk Report</h1>
-    <div class="subtitle">Areas: Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · Access Trail &nbsp;·&nbsp; Q1-2026 &nbsp;·&nbsp; Big Rock = Yes</div>
+    <div class="subtitle">Areas: Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1-2026 &nbsp;·&nbsp; Big Rock = Yes</div>
   </div>
   <div class="header-right">
     <span class="quarter-badge">Q1 2026</span>
@@ -234,7 +235,7 @@
 <div class="cards">
   <div class="card total">
     <div class="label">Total Epics</div>
-    <div class="value">139</div>
+    <div class="value">142</div>
     <div class="sublabel">All areas</div>
   </div>
   <div class="card highly">
@@ -254,7 +255,7 @@
   </div>
   <div class="card ontrack">
     <div class="label">On Track</div>
-    <div class="value">96</div>
+    <div class="value">99</div>
     <div class="sublabel">Not shown</div>
   </div>
 </div>
@@ -293,10 +294,13 @@
   <button class="area-btn" data-area="dlp-omni" onclick="setArea('dlp-omni')">
     <span class="dot lav"></span>DLP Omni &amp; Platform
   </button>
+  <button class="area-btn" data-area="dlp-ai" onclick="setArea('dlp-ai')">
+    <span class="dot sky"></span>DLP AI Protect
+  </button>
   <button class="area-btn" data-area="access-trail" onclick="setArea('access-trail')">
     <span class="dot lime"></span>Access Trail
   </button>
-  <span class="area-count" id="area-count">Showing 11 of 11 areas</span>
+  <span class="area-count" id="area-count">Showing 12 of 12 areas</span>
 </div>
 
 
@@ -1582,7 +1586,34 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     AREA 11 — Access Trail (Team Fiat)
+     AREA 11 — DLP AI Protect
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="area-section" id="area-dlp-ai">
+  <div class="area-header">
+    <span class="area-title">DLP AI Protect</span>
+    <span class="area-meta">3 epics · 0 needing attention</span>
+    <span class="area-note">On Track items hidden</span>
+  </div>
+  <div class="area-divider"></div>
+
+  <div class="observations-box">
+    <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
+    <ul class="obs-list">
+      <li>All 3 Q1 Big Rocks are On Track — no items at risk or out of Q.</li>
+      <li><strong>DL-10153</strong> (AI Policy Management — OOTB Policies) and <strong>DL-10156</strong> (OOTB Alerting Policies Catalog) are both Commit, targeting V36.</li>
+      <li><strong>DL-10177</strong> (Enterprise AI — Gemini API Integration) is In Review.</li>
+      <li>No items changed Risk Status or Commit Type since Mar 16.</li>
+    </ul>
+  </div>
+
+  <div class="empty-state">
+    No items needing attention — all 3 DLP AI Protect epics are On Track.
+  </div>
+</div><!-- /area-dlp-ai -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     AREA 12 — Access Trail (Team Fiat)
      ═══════════════════════════════════════════════════════════════ -->
 <div class="area-section" id="area-access-trail">
   <div class="area-header">
@@ -1684,7 +1715,7 @@
 </div><!-- /area-access-trail -->
 
 
-<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; March 30, 2026</footer>
+<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; March 30, 2026</footer>
 
 <script>
   function setArea(area) {
@@ -1695,16 +1726,16 @@
       remediation: 'area-remediation', portal: 'area-portal', issues: 'area-issues',
       access: 'area-access', platform: 'area-platform', 'platform-core': 'area-platform-core',
       scanning: 'area-scanning', data: 'area-data', 'dlp-agent': 'area-dlp-agent',
-      'dlp-omni': 'area-dlp-omni', 'access-trail': 'area-access-trail'
+      'dlp-omni': 'area-dlp-omni', 'dlp-ai': 'area-dlp-ai', 'access-trail': 'area-access-trail'
     };
     const keys = Object.keys(sections);
 
     if (area === 'all') {
       keys.forEach(k => document.getElementById(sections[k]).classList.remove('hidden'));
-      document.getElementById('area-count').textContent = 'Showing 11 of 11 areas';
+      document.getElementById('area-count').textContent = 'Showing 12 of 12 areas';
     } else {
       keys.forEach(k => document.getElementById(sections[k]).classList.toggle('hidden', k !== area));
-      document.getElementById('area-count').textContent = 'Showing 1 of 11 areas';
+      document.getElementById('area-count').textContent = 'Showing 1 of 12 areas';
     }
   }
 </script>
