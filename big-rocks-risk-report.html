@@ -128,6 +128,7 @@
     tbody tr.highly-at-risk { border-left: 4px solid #b92500; }
     tbody tr.at-risk        { border-left: 4px solid #f79009; }
     tbody tr.out-of-q       { border-left: 4px solid #6554c0; }
+    tbody tr.done          { border-left: 4px solid #36b37e; }
 
     .key-link {
       font-family: 'SF Mono', 'Fira Code', monospace;
@@ -227,7 +228,7 @@
   </div>
   <div class="header-right">
     <span class="quarter-badge">Q1 2026</span>
-    <span class="generated">Generated: March 30, 2026</span>
+    <span class="generated">Generated: April 6, 2026</span>
   </div>
 </header>
 
@@ -235,7 +236,7 @@
 <div class="cards">
   <div class="card total">
     <div class="label">Total Epics</div>
-    <div class="value">142</div>
+    <div class="value">143</div>
     <div class="sublabel">All areas</div>
   </div>
   <div class="card highly">
@@ -320,7 +321,7 @@
     <ul class="obs-list">
       <li><strong>CY-89063 &amp; CY-89061</strong> are both Highly At Risk — SaaSy team resource constraints and open infra questions are the blockers.</li>
       <li><strong>CY-79531</strong> is in active testing but slipped V35 — feature-flagged off, targeting V36 completion.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 16.</li>
+      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
     </ul>
   </div>
 
@@ -333,7 +334,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -407,22 +408,76 @@
 <div class="area-section" id="area-portal">
   <div class="area-header">
     <span class="area-title">Remediation Portal</span>
-    <span class="area-meta">3 epics · 0 needing attention</span>
-    <span class="area-note">Excludes Done · Changes in past 2 weeks only</span>
+    <span class="area-meta">3 epics · 4 Done</span>
+    <span class="area-note">Done items shown below</span>
   </div>
   <div class="area-divider"></div>
 
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li>No items with risk, commit, or Current Q changes in the past 2 weeks.</li>
-      <li><strong>CY-89347</strong> (Disable Access from portal) is Out Of Q — moved in January, outside the 2-week window.</li>
+      <li>4 epics completed Done in V35 (Mar 15): Slack integration, Teams integration, Resolution reason support, Approval Flow.</li>
+      <li><strong>CY-89347</strong> (Disable Access from portal) is Out Of Q — moved in January.</li>
       <li><strong>CY-88842</strong> (Unified Portal – Group by DS Owner) and <strong>CY-95483</strong> (Improvements &amp; Enhancements) are both On Track and In Progress targeting V36.</li>
     </ul>
   </div>
 
-  <div class="empty-state">
-    No items with changes in the past 2 weeks — all 3 Remediation Portal epics are stable.
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Epic Name</th>
+          <th>Risk Status</th>
+          <th>Commit Type</th>
+          <th>Issue Status</th>
+          <th>Changes Since Mar 25</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- CY-89344 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89344" target="_blank">CY-89344</a></td>
+          <td><div class="epic-name">Remediation Portal: Integrate Remediation Portal with Teams</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-89342 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89342" target="_blank">CY-89342</a></td>
+          <td><div class="epic-name">Remediation Portal: Integrate Remediation Portal with Slack</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-88839 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88839" target="_blank">CY-88839</a></td>
+          <td><div class="epic-name">Remediation Portal — Resolution reason support <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-88649 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88649" target="_blank">CY-88649</a></td>
+          <td><div class="epic-name">Remediation Portal — Approval Flow - Q1 <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+      </tbody>
+    </table>
   </div>
 </div><!-- /area-portal -->
 
@@ -444,7 +499,7 @@
       <li><strong>CY-87678</strong> (On-Prem MIP Policy for Remediation): At Risk due to on-prem team gaps and resource constraints — targeting V35 hotfix or V36.</li>
       <li><strong>CY-87815</strong> (Object Sensitivity): At Risk — design decisions delayed work to V36, effort estimation still in progress with the data team.</li>
       <li><strong>CY-89586</strong> (Policies for M365 Retention Labels): moved Out Of Q — removed from the quarter.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 16.</li>
+      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
     </ul>
   </div>
 
@@ -457,7 +512,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -552,7 +607,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -671,7 +726,8 @@
     <ul class="obs-list">
       <li><strong>CY-63296</strong> (Integrations Page Infra Phase 2) &amp; <strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): Both moved to At Risk on Mar 23 — Cohesity integration and OCTO implementation are the blockers for V36.</li>
       <li><strong>CY-89471</strong> (In-Platform Roles &amp; Permissions): Out Of Q — PM lead confirmed this was not mandatory for FedRAMP Q1; Cognito backend support is sufficient for Q1 scope.</li>
-      <li>No other items changed Risk Status or Commit Type since Mar 16.</li>
+      <li><strong>CY-91083</strong> (DSPM&lt;&gt;DLP Unification – Navigation Menu) moved to Done on Apr 5 (V36).</li>
+      <li>No other items changed Risk Status or Commit Type since Mar 25.</li>
     </ul>
   </div>
 
@@ -684,12 +740,12 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- CY-63296 — At Risk (RECENT CHANGE) -->
+        <!-- CY-63296 — At Risk -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-63296" target="_blank">CY-63296</a></td>
           <td>
@@ -707,18 +763,10 @@
           </td>
           <td><span class="commit-badge stretch">Stretch</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 23</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-29226 — At Risk (RECENT CHANGE) -->
+        <!-- CY-29226 — At Risk -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-29226" target="_blank">CY-29226</a></td>
           <td>
@@ -736,15 +784,7 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 23</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
         <!-- CY-89471 — Out Of Q -->
@@ -757,6 +797,64 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge out-of-q">Out Of Q</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-91083 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-91083" target="_blank">CY-91083</a></td>
+          <td><div class="epic-name">DSPM&lt;&gt;DLP Unification — Navigation Menu and DLP Tabs <span class="vtag v36">V36</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- CY-88014 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88014" target="_blank">CY-88014</a></td>
+          <td><div class="epic-name">Design System — Message Bar <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-83434 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-83434" target="_blank">CY-83434</a></td>
+          <td><div class="epic-name">Generic Third Party Datastore Enrichment — CSPM <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-70568 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-70568" target="_blank">CY-70568</a></td>
+          <td><div class="epic-name">Generic Third Party Datastore Enrichment <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-67401 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-67401" target="_blank">CY-67401</a></td>
+          <td><div class="epic-name">Design System Components Phase 1 (Q4 Scope) <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
@@ -795,7 +893,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -841,13 +939,6 @@
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 17</span>
-            </div>
-            <div class="change-row">
               <span class="change-type">FIX VER</span>
               <span class="change-from">V36</span>
               <span class="change-arrow">→</span>
@@ -873,6 +964,16 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge out-of-q">Out Of Q</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-88696 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88696" target="_blank">CY-88696</a></td>
+          <td><div class="epic-name">Actions Templates — More Actions and Dynamic variables <span class="vtag v35">V35</span> <span class="vtag v36">V36</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
@@ -914,12 +1015,12 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- CY-88797 — Highly At Risk + Out Of Q (RECENT) -->
+        <!-- CY-88797 — Highly At Risk + Out Of Q -->
         <tr class="highly-at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88797" target="_blank">CY-88797</a></td>
           <td>
@@ -937,18 +1038,10 @@
           </td>
           <td><span class="commit-badge out-of-q">Out Of Q</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">At Risk</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">Highly At Risk</span>
-              <span class="change-date">Mar 23</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-78657 — At Risk (RECENT) -->
+        <!-- CY-78657 — At Risk -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-78657" target="_blank">CY-78657</a></td>
           <td>
@@ -966,18 +1059,10 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 24</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-78660 — At Risk (RECENT) -->
+        <!-- CY-78660 — At Risk -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-78660" target="_blank">CY-78660</a></td>
           <td>
@@ -995,15 +1080,7 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 24</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
         <!-- CY-88111 — At Risk -->
@@ -1142,6 +1219,16 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
+        <!-- CY-64785 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-64785" target="_blank">CY-64785</a></td>
+          <td><div class="epic-name">On prem: Cyera Zero-Trust Connector (Ngrok EOL) <span class="vtag v36">V36</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
       </tbody>
     </table>
   </div>
@@ -1165,7 +1252,7 @@
       <li><strong>CY-92936</strong> (Support Custom Policies &amp; Customization): Moved to At Risk Mar 25 — feature will be delivered but scope may be reduced; previously pushed from V35 to V36 due to reprioritization.</li>
       <li><strong>CY-78976</strong> ([Data] Geo and Role Customization): At Risk — core classification migration completed; data integrity fixes in hotfix; existing policies migration at risk due to 3 FTEs in reserves with potential revert. Checking if Platform team can add backwards compatibility.</li>
       <li><strong>CY-93229</strong> (Structured Geo Residency Model) appears On Track in Jira but PM flagged as likely delayed to hotfix V36. <strong>CY-95719</strong> ([Data] Role Customization) appears On Track in Jira but PM confirmed release delayed to V37.</li>
-      <li><strong>CY-92947</strong> (AI-Severity Outpost): At Risk — design of solution not yet finalized, main blocker.</li>
+      <li><strong>CY-92947</strong> (AI-Severity Outpost): Moved to Q2 on Apr 5 — risk improved to On Track, design concerns resolved for now.</li>
       <li><strong>CY-92949</strong> (Policy External Identity): At Risk — dependency on Access team planned for June 26, which may not leave enough time.</li>
       <li><strong>CY-92996</strong> (FeedbackLoop finish indicator): At Risk — Platform sprint not yet allocated; potential technical issues with providing the finish indicator.</li>
       <li><strong>CY-93213</strong> (Full Parity for 5 Existing Languages): Moved Q1-2026 → Q2-2026 on Feb 24; fix version updated to V38; commit downgraded to Design.</li>
@@ -1181,7 +1268,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -1236,25 +1323,32 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-92947 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-92947 — Moved to Q2 -->
+        <tr class="out-of-q">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-92947" target="_blank">CY-92947</a></td>
           <td>
             <div class="epic-name">AI-Severity Outpost</div>
-            <div class="risk-comment">Design of the solution is not yet finalized — main risk.</div>
+            <div class="risk-comment">Design concerns resolved — deferred to Q2-2026.</div>
           </td>
-          <td>
-            <span class="risk-badge at-risk">At Risk</span>
-            <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
-              <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 3</span>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">On Track</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 5</span>
             </div>
           </td>
-          <td><span class="commit-badge stretch">Stretch</span></td>
-          <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
         <!-- CY-92949 — At Risk -->
@@ -1321,6 +1415,52 @@
         </tr>
 
 
+        <!-- CY-93006 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-93006" target="_blank">CY-93006</a></td>
+          <td><div class="epic-name">Suggest Logic for Data Owner <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- CY-92865 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-92865" target="_blank">CY-92865</a></td>
+          <td><div class="epic-name">Expose Object Level Priority <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- CY-90920 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-90920" target="_blank">CY-90920</a></td>
+          <td><div class="epic-name">[Data] Topics as Insights <span class="vtag v36">V36</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge stretch">Stretch</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
       </tbody>
     </table>
   </div>
@@ -1342,8 +1482,9 @@
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
       <li><strong>DL-11304</strong> (Endpoint Agent — AI based enforcement): At Risk — depends on the realtime pipeline; capacity issue under active resolution. Was escalated to Highly At Risk in February, then improved back to At Risk on Mar 10.</li>
-      <li>No epics moved to Q2 or out of Q — 10 of 11 epics are On Track; 4 already Done.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 16.</li>
+      <li><strong>DL-11304</strong> (Endpoint Agent — AI based enforcement): moved to Q2 on Mar 31 — still At Risk, capacity issue ongoing.</li>
+      <li>6 epics already Done — DL-12419 &amp; DL-10144 completed Apr 5.</li>
+      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
     </ul>
   </div>
 
@@ -1356,12 +1497,12 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- DL-11304 — At Risk -->
+        <!-- DL-11304 — At Risk + Moved to Q2 -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-11304" target="_blank">DL-11304</a></td>
           <td>
@@ -1377,8 +1518,92 @@
               <span class="rc-date">Mar 10</span>
             </div>
           </td>
-          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 31</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- DL-12419 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-12419" target="_blank">DL-12419</a></td>
+          <td><div class="epic-name">Endpoint Agent — One Drive (Native App) Enforcement</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- DL-10144 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-10144" target="_blank">DL-10144</a></td>
+          <td><div class="epic-name">Browser Extension — Deployment &amp; Updates (Intune, Google Admin, SCCM, Jamf)</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- DL-13591 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-13591" target="_blank">DL-13591</a></td>
+          <td><div class="epic-name">Browser Extension — Copilot AI Visibility &amp; Enforcement</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge stretch">Stretch</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- DL-10210 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-10210" target="_blank">DL-10210</a></td>
+          <td><div class="epic-name">Browser Extension — Implement Prompt Blocking (ChatGPT, Gemini)</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- DL-11850 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-11850" target="_blank">DL-11850</a></td>
+          <td><div class="epic-name">Browser Extension — Browser Popup Alerts</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- DL-13487 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-13487" target="_blank">DL-13487</a></td>
+          <td><div class="epic-name">Browser Extension — Claude AI Visibility &amp; Enforcement</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
@@ -1404,9 +1629,10 @@
     <ul class="obs-list">
       <li><strong>DL-19</strong> (Reports): Highly At Risk, Stretch — included in planning as stretch but currently not realistic.</li>
       <li><strong>DL-81</strong> (Memories / feedback management) &amp; <strong>DL-9974</strong> (Policy Versioning phase 1): Both moved to At Risk Mar 24–25 (RECENT) — design and research started late, may slip slightly past EoQ.</li>
-      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): At Risk since Feb 13, moved Out Of Q on Mar 26 (RECENT) — won't start until Deploy to Purview is complete.</li>
+      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): At Risk since Feb 13 — moved to Q2 on Apr 5; commit restored to Commit.</li>
       <li><strong>DL-11381</strong> (Filter based RBAC — projects): At Risk since Mar 9 — per PM (Alex Feldman / Ketzef): unrelated to unified Platform EA, does not affect it, and is not a blocker.</li>
-      <li><strong>DL-9739</strong> (Automatic creation of enforcement policy recommendations): Moved Q1→Q2 on Mar 25 (RECENT), commit changed to Out Of Q Mar 26 (RECENT) — currently Blocked.</li>
+      <li><strong>DL-9739</strong> (Automatic creation of enforcement policy recommendations): Moved to Q2 — currently Blocked.</li>
+      <li><strong>DL-19</strong> (Reports): Moved to Q2 on Apr 6 — still Highly At Risk.</li>
     </ul>
   </div>
 
@@ -1419,12 +1645,12 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- DL-19 — Highly At Risk -->
+        <!-- DL-19 — Highly At Risk + Moved to Q2 -->
         <tr class="highly-at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-19" target="_blank">DL-19</a></td>
           <td>
@@ -1440,12 +1666,20 @@
               <span class="rc-date">Mar 9</span>
             </div>
           </td>
-          <td><span class="commit-badge stretch">Stretch</span></td>
+          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 6</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- DL-81 — At Risk (RECENT) -->
+        <!-- DL-81 — At Risk -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-81" target="_blank">DL-81</a></td>
           <td>
@@ -1463,15 +1697,7 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell">
-            <div class="change-row">
-              <span class="change-type">RISK</span>
-              <span class="change-from">On Track</span>
-              <span class="change-arrow">→</span>
-              <span class="change-to">At Risk</span>
-              <span class="change-date">Mar 24</span>
-            </div>
-          </td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
         <!-- DL-9974 — At Risk (RECENT) -->
@@ -1502,7 +1728,7 @@
           </td>
         </tr>
 
-        <!-- DL-7501 — At Risk + Out Of Q (RECENT) -->
+        <!-- DL-7501 — At Risk + Moved to Q2 -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-7501" target="_blank">DL-7501</a></td>
           <td>
@@ -1518,15 +1744,15 @@
               <span class="rc-date">Feb 13</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
+          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
-              <span class="change-type">COMMIT</span>
-              <span class="change-from">Commit</span>
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
               <span class="change-arrow">→</span>
-              <span class="change-to">Out Of Q</span>
-              <span class="change-date">Mar 26</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 5</span>
             </div>
           </td>
         </tr>
@@ -1579,6 +1805,34 @@
           </td>
         </tr>
 
+        <!-- DL-10219 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-10219" target="_blank">DL-10219</a></td>
+          <td><div class="epic-name">Suggested risky user</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Progress</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 6</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- DL-132 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-132" target="_blank">DL-132</a></td>
+          <td><div class="epic-name">Trends automatic creation</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
       </tbody>
     </table>
   </div>
@@ -1601,13 +1855,45 @@
     <ul class="obs-list">
       <li>All 3 Q1 Big Rocks are On Track — no items at risk or out of Q.</li>
       <li><strong>DL-10153</strong> (AI Policy Management — OOTB Policies) and <strong>DL-10156</strong> (OOTB Alerting Policies Catalog) are both Commit, targeting V36.</li>
-      <li><strong>DL-10177</strong> (Enterprise AI — Gemini API Integration) is In Review.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 16.</li>
+      <li><strong>DL-10177</strong> (Enterprise AI — Gemini API Integration) is Done as of Apr 5.</li>
+      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
     </ul>
   </div>
 
-  <div class="empty-state">
-    No items needing attention — all 3 DLP AI Protect epics are On Track.
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Epic Name</th>
+          <th>Risk Status</th>
+          <th>Commit Type</th>
+          <th>Issue Status</th>
+          <th>Changes Since Mar 25</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- DL-10177 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-10177" target="_blank">DL-10177</a></td>
+          <td><div class="epic-name">Enterprise AI — Gemini API Integration (Google Vault)</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">In Review</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Done</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
   </div>
 </div><!-- /area-dlp-ai -->
 
@@ -1643,7 +1929,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 16</th>
+          <th>Changes Since Mar 25</th>
         </tr>
       </thead>
       <tbody>
@@ -1709,13 +1995,23 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
+        <!-- CY-86004 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-86004" target="_blank">CY-86004</a></td>
+          <td><div class="epic-name">Spark Data Pipeline <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
       </tbody>
     </table>
   </div>
 </div><!-- /area-access-trail -->
 
 
-<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; March 30, 2026</footer>
+<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 6, 2026</footer>
 
 <script>
   function setArea(area) {
