@@ -220,17 +220,19 @@
 
     /* ── Done row toggle ── */
     .done-toggle-row td {
-      padding: 7px 14px;
-      background: #f8f9fa;
-      border-top: 1px dashed #dfe1e6;
+      padding: 8px 14px;
+      background: #f0faf5;
+      border-top: 1px dashed #b3efd1;
     }
     .done-toggle-btn {
-      background: none; border: none; cursor: pointer;
-      font-size: 12px; color: #6b778c; font-weight: 600;
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 0; letter-spacing: 0.01em;
+      background: #dcf5e7; color: #1d6b42;
+      border: 1px solid #36b37e; cursor: pointer;
+      font-size: 12px; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 14px; border-radius: 12px;
+      letter-spacing: 0.01em; transition: background 0.15s;
     }
-    .done-toggle-btn:hover { color: #0052cc; }
+    .done-toggle-btn:hover { background: #b3efd1; border-color: #1d6b42; }
     .done-toggle-btn .toggle-arrow { font-size: 10px; }
   </style>
 </head>
@@ -2051,6 +2053,18 @@
     }
   }
 
+  // Commit Type sort order
+  const COMMIT_ORDER = { committed: 0, stretch: 1, 'out-of-q': 2, 'moved-to-q2': 3 };
+
+  function getCommitPriority(row) {
+    const badge = row.querySelector('.commit-badge');
+    if (!badge) return 99;
+    for (const [cls, pri] of Object.entries(COMMIT_ORDER)) {
+      if (badge.classList.contains(cls)) return pri;
+    }
+    return 99;
+  }
+
   function toggleDone(btn) {
     const tbody = btn.closest('tbody');
     const doneRows = tbody.querySelectorAll('tr.done');
@@ -2064,14 +2078,20 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.area-section').forEach(section => {
-      const doneRows = section.querySelectorAll('tbody tr.done');
-      if (!doneRows.length) return;
+      const tbody = section.querySelector('tbody');
+      if (!tbody) return;
 
-      // Hide done rows by default
+      // Sort rows by Commit Type: Commit → Stretch → Out Of Q → Moved to Q2
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort((a, b) => getCommitPriority(a) - getCommitPriority(b));
+      rows.forEach(r => tbody.appendChild(r));
+
+      // Collapse Done rows by default
+      const doneRows = tbody.querySelectorAll('tr.done');
+      if (!doneRows.length) return;
       doneRows.forEach(r => r.style.display = 'none');
 
-      // Insert toggle row at bottom of tbody
-      const tbody = section.querySelector('tbody');
+      // Append toggle button row
       const toggleRow = document.createElement('tr');
       toggleRow.className = 'done-toggle-row';
       toggleRow.innerHTML = `<td colspan="6">
