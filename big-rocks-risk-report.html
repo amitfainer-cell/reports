@@ -175,9 +175,10 @@
       padding: 3px 10px; border-radius: 12px;
       font-size: 12px; font-weight: 600; white-space: nowrap;
     }
-    .commit-badge.committed { background: #e9f0ff; color: #0052cc; }
-    .commit-badge.stretch   { background: #fff3cd; color: #7a4f00; }
-    .commit-badge.out-of-q  { background: #f0f2f5; color: #6b778c; }
+    .commit-badge.committed  { background: #e9f0ff; color: #0052cc; }
+    .commit-badge.stretch    { background: #fff3cd; color: #7a4f00; }
+    .commit-badge.out-of-q   { background: #f0f2f5; color: #6b778c; }
+    .commit-badge.moved-to-q2 { background: #ede9ff; color: #4c3999; }
 
     /* Status badges */
     .status-badge {
@@ -216,6 +217,21 @@
     .empty-state { background: white; border-radius: 10px; padding: 32px 20px; text-align: center; color: #97a0af; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
 
     footer { margin-top: 28px; text-align: center; font-size: 12px; color: #b3bac5; }
+
+    /* ── Done row toggle ── */
+    .done-toggle-row td {
+      padding: 7px 14px;
+      background: #f8f9fa;
+      border-top: 1px dashed #dfe1e6;
+    }
+    .done-toggle-btn {
+      background: none; border: none; cursor: pointer;
+      font-size: 12px; color: #6b778c; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 0; letter-spacing: 0.01em;
+    }
+    .done-toggle-btn:hover { color: #0052cc; }
+    .done-toggle-btn .toggle-arrow { font-size: 10px; }
   </style>
 </head>
 <body>
@@ -935,7 +951,7 @@
               <span class="rc-date">Mar 17</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1174,7 +1190,7 @@
             <div class="risk-comment">Pushed to Q2 — waiting for inputs from Netflix to start data collection and classification efforts.</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1194,7 +1210,7 @@
             <div class="epic-name">On-Prem Remediation: Move file to quarantine</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1214,7 +1230,7 @@
             <div class="epic-name">ServiceNow send email to ticket owner</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
@@ -1331,7 +1347,7 @@
             <div class="risk-comment">Design concerns resolved — deferred to Q2-2026.</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1401,7 +1417,7 @@
             <div class="risk-comment">Moved from Q1-2026 to Q2-2026 on Feb 24; fix version updated to V38; commit downgraded to Design.</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1518,7 +1534,7 @@
               <span class="rc-date">Mar 10</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1666,7 +1682,7 @@
               <span class="rc-date">Mar 9</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1744,7 +1760,7 @@
               <span class="rc-date">Feb 13</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1785,7 +1801,7 @@
             <div class="epic-name">Automatic creation of enforcement policy recommendations</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge blocked">Blocked</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1950,7 +1966,7 @@
               <span class="rc-date">Mar 8</span>
             </div>
           </td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
@@ -1963,7 +1979,7 @@
             <div class="risk-comment">Waiting for approval of approach (app/user as proxy for significant access).</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1990,7 +2006,7 @@
             <div class="epic-name">File Lineage GA</div>
           </td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Moved to Q2</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
@@ -2034,6 +2050,38 @@
       document.getElementById('area-count').textContent = 'Showing 1 of 12 areas';
     }
   }
+
+  function toggleDone(btn) {
+    const tbody = btn.closest('tbody');
+    const doneRows = tbody.querySelectorAll('tr.done');
+    const count = doneRows.length;
+    const isHidden = doneRows[0].style.display === 'none';
+    doneRows.forEach(r => r.style.display = isHidden ? '' : 'none');
+    btn.innerHTML = isHidden
+      ? `<span class="toggle-arrow">▴</span> Hide ${count} Done`
+      : `<span class="toggle-arrow">▾</span> Show ${count} Done`;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.area-section').forEach(section => {
+      const doneRows = section.querySelectorAll('tbody tr.done');
+      if (!doneRows.length) return;
+
+      // Hide done rows by default
+      doneRows.forEach(r => r.style.display = 'none');
+
+      // Insert toggle row at bottom of tbody
+      const tbody = section.querySelector('tbody');
+      const toggleRow = document.createElement('tr');
+      toggleRow.className = 'done-toggle-row';
+      toggleRow.innerHTML = `<td colspan="6">
+        <button class="done-toggle-btn" onclick="toggleDone(this)">
+          <span class="toggle-arrow">▾</span> Show ${doneRows.length} Done
+        </button>
+      </td>`;
+      tbody.appendChild(toggleRow);
+    });
+  });
 </script>
 </body>
 </html>
