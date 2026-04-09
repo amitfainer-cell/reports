@@ -78,6 +78,7 @@
     .area-btn .dot.coral  { background: #ff5630; }
     .area-btn .dot.lav    { background: #8270db; }
     .area-btn .dot.lime   { background: #65a30d; }
+    .area-btn .dot.indigo { background: #4f46e5; }
     .area-btn .dot.sky    { background: #0ea5e9; }
 
     .status-badge.blocked { background: #ffe0d6; color: #b92500; }
@@ -242,7 +243,7 @@
 <header>
   <div class="header-left">
     <h1>Big Rock - Risk Report</h1>
-    <div class="subtitle">Areas: Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1-2026 &nbsp;·&nbsp; Big Rock = Yes</div>
+    <div class="subtitle">Areas: Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail · Infrastructure &nbsp;·&nbsp; Q1-2026 &nbsp;·&nbsp; Big Rock = Yes</div>
   </div>
   <div class="header-right">
     <span class="quarter-badge">Q1 2026</span>
@@ -319,7 +320,10 @@
   <button class="area-btn" data-area="access-trail" onclick="setArea('access-trail')">
     <span class="dot lime"></span>Access Trail
   </button>
-  <span class="area-count" id="area-count">Showing 12 of 12 areas</span>
+  <button class="area-btn" data-area="infra" onclick="setArea('infra')">
+    <span class="dot indigo"></span>Infrastructure
+  </button>
+  <span class="area-count" id="area-count">Showing 13 of 13 areas</span>
 </div>
 
 
@@ -2180,7 +2184,93 @@
 </div><!-- /area-access-trail -->
 
 
-<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 9, 2026</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     AREA 13 — Infrastructure (Core / DevEx / DevOps)
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="area-section" id="area-infra">
+  <div class="area-header">
+    <span class="area-title">Infrastructure</span>
+    <span class="area-meta">8 epics · 1 Done</span>
+    <span class="area-note">On Track items hidden</span>
+  </div>
+  <div class="area-divider"></div>
+
+  <div class="observations-box">
+    <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
+    <ul class="obs-list">
+      <li>All 8 epics are On Track — no items At Risk or Out Of Q.</li>
+      <li><strong>CY-91278</strong> (Service shading - virtual lag): currently <strong>Blocked</strong> — no risk escalation yet but worth monitoring.</li>
+      <li><strong>CY-93176</strong> (Scalable storage for data features): briefly moved to Done on Mar 26 then reverted to In Progress on Mar 31 — still targeting V36.</li>
+      <li><strong>CY-85741</strong> (Kafka rebalancing R&amp;D): Done — completed in V35.</li>
+    </ul>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Epic Name</th>
+          <th>Risk Status</th>
+          <th>Commit Type</th>
+          <th>Issue Status</th>
+          <th>Changes Since Mar 25</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- CY-91278 — Blocked -->
+        <tr>
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-91278" target="_blank">CY-91278</a></td>
+          <td>
+            <div class="epic-name">Service shading — virtual lag</div>
+            <div class="risk-comment">Currently Blocked — no risk escalation yet, monitoring.</div>
+          </td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge blocked">Blocked</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-93176 — In Progress (brief Done Mar 26 → reverted Mar 31) -->
+        <tr>
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-93176" target="_blank">CY-93176</a></td>
+          <td>
+            <div class="epic-name">Scalable storage for data features</div>
+            <div class="risk-comment">Briefly Done on Mar 26 — reverted to In Progress on Mar 31.</div>
+          </td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge in-progress">In Progress</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">Done</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">In Progress</span>
+              <span class="change-date">Mar 31</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- CY-85741 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-85741" target="_blank">CY-85741</a></td>
+          <td><div class="epic-name">Research and design for Kafka enhancement (rebalances) <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div><!-- /area-infra -->
+
+<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail · Infrastructure &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 9, 2026</footer>
 
 <script>
   function setArea(area) {
@@ -2191,16 +2281,17 @@
       remediation: 'area-remediation', portal: 'area-portal', issues: 'area-issues',
       access: 'area-access', platform: 'area-platform', 'platform-core': 'area-platform-core',
       scanning: 'area-scanning', data: 'area-data', 'dlp-agent': 'area-dlp-agent',
-      'dlp-omni': 'area-dlp-omni', 'dlp-ai': 'area-dlp-ai', 'access-trail': 'area-access-trail'
+      'dlp-omni': 'area-dlp-omni', 'dlp-ai': 'area-dlp-ai', 'access-trail': 'area-access-trail',
+      'infra': 'area-infra'
     };
     const keys = Object.keys(sections);
 
     if (area === 'all') {
       keys.forEach(k => document.getElementById(sections[k]).classList.remove('hidden'));
-      document.getElementById('area-count').textContent = 'Showing 12 of 12 areas';
+      document.getElementById('area-count').textContent = 'Showing 13 of 13 areas';
     } else {
       keys.forEach(k => document.getElementById(sections[k]).classList.toggle('hidden', k !== area));
-      document.getElementById('area-count').textContent = 'Showing 1 of 12 areas';
+      document.getElementById('area-count').textContent = 'Showing 1 of 13 areas';
     }
   }
 
