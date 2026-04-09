@@ -2195,9 +2195,14 @@
       const tbody = section.querySelector('tbody');
       if (!tbody) return;
 
-      // Sort rows by Commit Type: Commit → Stretch → Out Of Q → Moved to Q2
+      // Sort rows: non-Done by Commit Type first, Done rows always last
       const rows = Array.from(tbody.querySelectorAll('tr'));
-      rows.sort((a, b) => getCommitPriority(a) - getCommitPriority(b));
+      rows.sort((a, b) => {
+        const aDone = a.classList.contains('done') ? 1 : 0;
+        const bDone = b.classList.contains('done') ? 1 : 0;
+        if (aDone !== bDone) return aDone - bDone;
+        return getCommitPriority(a) - getCommitPriority(b);
+      });
       rows.forEach(r => tbody.appendChild(r));
 
       // Collapse Done rows by default
