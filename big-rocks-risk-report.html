@@ -2072,41 +2072,20 @@
     return 99;
   }
 
-  function toggleDone(btn) {
-    const tbody = btn.closest('tbody');
-    const doneRows = tbody.querySelectorAll('tr.done');
-    const count = doneRows.length;
-    const isHidden = doneRows[0].style.display === 'none';
-    doneRows.forEach(r => r.style.display = isHidden ? '' : 'none');
-    btn.innerHTML = isHidden
-      ? `<span class="toggle-arrow">▴</span> Hide ${count} Done`
-      : `<span class="toggle-arrow">▾</span> Show ${count} Done`;
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.area-section').forEach(section => {
       const tbody = section.querySelector('tbody');
       if (!tbody) return;
 
-      // Sort rows by Commit Type: Commit → Stretch → Out Of Q → Moved to Q2
       const rows = Array.from(tbody.querySelectorAll('tr'));
-      rows.sort((a, b) => getCommitPriority(a) - getCommitPriority(b));
-      rows.forEach(r => tbody.appendChild(r));
+      const doneRows    = rows.filter(r => r.classList.contains('done'));
+      const otherRows   = rows.filter(r => !r.classList.contains('done'));
 
-      // Collapse Done rows by default
-      const doneRows = tbody.querySelectorAll('tr.done');
-      if (!doneRows.length) return;
-      doneRows.forEach(r => r.style.display = 'none');
+      // Sort non-done rows by Commit Type: Commit → Stretch → Out Of Q → Moved to Q2
+      otherRows.sort((a, b) => getCommitPriority(a) - getCommitPriority(b));
 
-      // Append toggle button row
-      const toggleRow = document.createElement('tr');
-      toggleRow.className = 'done-toggle-row';
-      toggleRow.innerHTML = `<td colspan="6">
-        <button class="done-toggle-btn" onclick="toggleDone(this)">
-          <span class="toggle-arrow">▾</span> Show ${doneRows.length} Done
-        </button>
-      </td>`;
-      tbody.appendChild(toggleRow);
+      // Re-append: non-done first, done at the bottom — all visible
+      [...otherRows, ...doneRows].forEach(r => tbody.appendChild(r));
     });
   });
 </script>
