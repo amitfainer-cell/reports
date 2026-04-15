@@ -248,7 +248,7 @@
   </div>
   <div class="header-right">
     <span class="quarter-badge">Q1 2026</span>
-    <span class="generated">Generated: April 6, 2026</span>
+    <span class="generated">Generated: April 15, 2026</span>
   </div>
 </header>
 
@@ -261,12 +261,12 @@
   </div>
   <div class="card highly">
     <div class="label">Highly At Risk</div>
-    <div class="value">4</div>
+    <div class="value">5</div>
     <div class="sublabel">Risk Status</div>
   </div>
   <div class="card atrisk">
     <div class="label">At Risk</div>
-    <div class="value">27</div>
+    <div class="value">25</div>
     <div class="sublabel">Risk Status</div>
   </div>
   <div class="card outofq">
@@ -346,7 +346,7 @@
     <ul class="obs-list">
       <li><strong>CY-89063 &amp; CY-89061</strong> are both Highly At Risk — SaaSy team resource constraints and open infra questions are the blockers.</li>
       <li><strong>CY-79531</strong> is in active testing but slipped V35 — feature-flagged off, targeting V36 completion.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
+      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -359,7 +359,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -441,7 +441,8 @@
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li>4 epics completed Done in V35 (Mar 15): Slack integration, Teams integration, Resolution reason support, Approval Flow.</li>
+      <li><strong>CY-89344</strong> (Teams integration) and <strong>CY-89342</strong> (Slack integration) <strong>reverted from Done → To Do on Apr 9</strong> and moved to Q2-2026 — regression from V35.</li>
+      <li>2 epics remain Done from V35 (Mar 15): Resolution reason support (CY-88839), Approval Flow (CY-88649).</li>
       <li><strong>CY-89347</strong> (Disable Access from portal) is Out Of Q — moved in January.</li>
       <li><strong>CY-88842</strong> (Unified Portal – Group by DS Owner) and <strong>CY-95483</strong> (Improvements &amp; Enhancements) are both On Track and In Progress targeting V36.</li>
     </ul>
@@ -456,29 +457,59 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- CY-89344 — Done -->
-        <tr class="done">
+        <!-- CY-89344 — Reverted to Out Of Q / Q2 -->
+        <tr class="out-of-q">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89344" target="_blank">CY-89344</a></td>
           <td><div class="epic-name">Remediation Portal: Integrate Remediation Portal with Teams</div></td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
-          <td><span class="status-badge done">Done</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
+          <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">Done</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">To Do</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- CY-89342 — Done -->
-        <tr class="done">
+        <!-- CY-89342 — Reverted to Out Of Q / Q2 -->
+        <tr class="out-of-q">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89342" target="_blank">CY-89342</a></td>
           <td><div class="epic-name">Remediation Portal: Integrate Remediation Portal with Slack</div></td>
           <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
-          <td><span class="status-badge done">Done</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
+          <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">STATUS</span>
+              <span class="change-from">Done</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">To Do</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-88839 — Done -->
@@ -524,7 +555,7 @@
       <li><strong>CY-87678</strong> (On-Prem MIP Policy for Remediation): At Risk due to on-prem team gaps and resource constraints — targeting V35 hotfix or V36.</li>
       <li><strong>CY-87815</strong> (Object Sensitivity): At Risk — design decisions delayed work to V36, effort estimation still in progress with the data team.</li>
       <li><strong>CY-89586</strong> (Policies for M365 Retention Labels): moved Out Of Q — removed from the quarter.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
+      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -537,7 +568,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -618,8 +649,8 @@
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
       <li><strong>CY-97178</strong> (Unified identities with DLP): Pushing at full speed — Access lead confirmed no V37 slip, but needs support from Inbal Ketzef to close open ends. Added in previous update as part of unified Platform.</li>
-      <li><strong>CY-89238</strong> (Granular Permissions filters): Work not yet started — planned for next sprint, but may be de-prioritized if other features spill over (DLP unification, Salesforce access, etc.).</li>
-      <li><strong>CY-89230</strong> (Unused Permissions) &amp; <strong>CY-89239</strong> (GWS NHIs) are both Out Of Q — capacity and dependency constraints.</li>
+      <li><strong>CY-89238</strong> (Granular Permissions filters): Commit Type downgraded Stretch → Out Of Q on Apr 12 — de-prioritized due to capacity spillover (DLP unification, Salesforce access, etc.).</li>
+      <li><strong>CY-89230</strong> (Unused Permissions): explicitly moved to Q2-2026 on Apr 12. <strong>CY-89239</strong> (GWS NHIs) also Out Of Q — capacity and dependency constraints.</li>
     </ul>
   </div>
 
@@ -632,7 +663,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -684,15 +715,23 @@
           </td>
           <td><span class="commit-badge out-of-q">Out Of Q</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 12</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- CY-89238 — At Risk -->
+        <!-- CY-89238 — At Risk + Out Of Q -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89238" target="_blank">CY-89238</a></td>
           <td>
             <div class="epic-name">Granular Permissions filters</div>
-            <div class="risk-comment">Issues no capacity.</div>
+            <div class="risk-comment">Issues no capacity — downgraded from Stretch to Out Of Q.</div>
           </td>
           <td>
             <span class="risk-badge at-risk">At Risk</span>
@@ -703,9 +742,17 @@
               <span class="rc-date">Feb 09</span>
             </div>
           </td>
-          <td><span class="commit-badge stretch">Stretch</span></td>
+          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">Stretch</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Out Of Q</span>
+              <span class="change-date">Apr 12</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-89239 — At Risk + Out Of Q -->
@@ -752,7 +799,8 @@
       <li><strong>CY-63296</strong> (Integrations Page Infra Phase 2) &amp; <strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): Both moved to At Risk on Mar 23 — Cohesity integration and OCTO implementation are the blockers for V36.</li>
       <li><strong>CY-89471</strong> (In-Platform Roles &amp; Permissions): Out Of Q — PM lead confirmed this was not mandatory for FedRAMP Q1; Cognito backend support is sufficient for Q1 scope.</li>
       <li><strong>CY-91083</strong> (DSPM&lt;&gt;DLP Unification – Navigation Menu) moved to Done on Apr 5 (V36).</li>
-      <li>No other items changed Risk Status or Commit Type since Mar 25.</li>
+      <li><strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): Fix version cleared (V36 → —) and explicitly moved to Q2-2026 on Apr 14.</li>
+      <li>No other items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -765,7 +813,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -791,12 +839,12 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-29226 — At Risk -->
+        <!-- CY-29226 — At Risk + moved to Q2 -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-29226" target="_blank">CY-29226</a></td>
           <td>
             <div class="epic-name">Generic Third Party Datastore Enrichment — Backup &amp; Recovery</div>
-            <div class="risk-comment">Cohesity integration at risk for V36.</div>
+            <div class="risk-comment">Cohesity integration at risk — fix version cleared and moved to Q2-2026 on Apr 14.</div>
           </td>
           <td>
             <span class="risk-badge at-risk">At Risk</span>
@@ -807,9 +855,24 @@
               <span class="rc-date">Mar 23</span>
             </div>
           </td>
-          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">FIX VER</span>
+              <span class="change-from">V36</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">—</span>
+              <span class="change-date">Apr 14</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 14</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-89471 — Out Of Q -->
@@ -903,7 +966,7 @@
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li><strong>CY-97509</strong> (Escalation Workflows V1): At Risk since Mar 10 — MVP scope may not be finished on time for the V36 release.</li>
+      <li><strong>CY-97509</strong> (Escalation Workflows V1): <strong>Improved to On Track on Apr 9</strong> — was At Risk since Mar 10 for V36 scope; now resolved.</li>
       <li><strong><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89443" target="_blank">CY-89443</a></strong> (Platform support for DLP projects): Moved to Q2-2026 on Mar 26 — PM confirmed DLP projects won't be implemented in V36. Risk changed to At Risk Mar 17, fix version moved V36 → V37 Mar 25.</li>
       <li><strong>CY-88693</strong> (Automation Center – Scheduled Trigger): Out Of Q.</li>
     </ul>
@@ -918,30 +981,37 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- CY-97509 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-97509 — Improved to On Track -->
+        <tr>
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-97509" target="_blank">CY-97509</a></td>
           <td>
             <div class="epic-name">Escalation Workflows — V1</div>
-            <div class="risk-comment">MVP scope may not be finished on time for the V36 release.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 10</span>
+              <span class="rc-to" style="color:#1d6b42">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 9</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow" style="color:#1d6b42">→</span>
+              <span class="change-to" style="color:#1d6b42">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 9</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-89443 — Moved to Q2 -->
@@ -1040,7 +1110,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -1279,7 +1349,7 @@
       <li><strong>CY-93229</strong> (Structured Geo Residency Model) appears On Track in Jira but PM flagged as likely delayed to hotfix V36. <strong>CY-95719</strong> ([Data] Role Customization) appears On Track in Jira but PM confirmed release delayed to V37.</li>
       <li><strong>CY-92947</strong> (AI-Severity Outpost): Moved to Q2 on Apr 5 — risk improved to On Track, design concerns resolved for now.</li>
       <li><strong>CY-92949</strong> (Policy External Identity): At Risk — dependency on Access team planned for June 26, which may not leave enough time.</li>
-      <li><strong>CY-92996</strong> (FeedbackLoop finish indicator): At Risk — Platform sprint not yet allocated; potential technical issues with providing the finish indicator.</li>
+      <li><strong>CY-92996</strong> (FeedbackLoop finish indicator): <strong>Escalated to Highly At Risk on Apr 9</strong> — Platform sprint not yet allocated; potential technical issues with providing the finish indicator.</li>
       <li><strong>CY-93213</strong> (Full Parity for 5 Existing Languages): Moved Q1-2026 → Q2-2026 on Feb 24; fix version updated to V38; commit downgraded to Design.</li>
     </ul>
   </div>
@@ -1293,7 +1363,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -1397,25 +1467,33 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-92996 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-92996 — Highly At Risk (escalated Apr 9) -->
+        <tr class="highly-at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-92996" target="_blank">CY-92996</a></td>
           <td>
-            <div class="epic-name">FeedbackLoop finish indicator</div>
+            <div class="epic-name">Feedback Loop — save users feedback</div>
             <div class="risk-comment">Platform sprint not yet allocated; potential technical issues with providing this finish indicator.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge highly-at-risk">Highly At Risk</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Feb 7</span>
+              <span class="rc-to">Highly At Risk</span>
+              <span class="rc-date">Apr 9</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Highly At Risk</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-93213 — Moved to Q2 (was Q1) -->
@@ -1509,7 +1587,7 @@
       <li><strong>DL-11304</strong> (Endpoint Agent — AI based enforcement): At Risk — depends on the realtime pipeline; capacity issue under active resolution. Was escalated to Highly At Risk in February, then improved back to At Risk on Mar 10.</li>
       <li><strong>DL-11304</strong> (Endpoint Agent — AI based enforcement): moved to Q2 on Mar 31 — still At Risk, capacity issue ongoing.</li>
       <li>6 epics already Done — DL-12419 &amp; DL-10144 completed Apr 5.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
+      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -1522,7 +1600,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -1658,6 +1736,8 @@
       <li><strong>DL-11381</strong> (Filter based RBAC — projects): At Risk since Mar 9 — per PM (Alex Feldman / Ketzef): unrelated to unified Platform EA, does not affect it, and is not a blocker.</li>
       <li><strong>DL-9739</strong> (Automatic creation of enforcement policy recommendations): Moved to Q2 — currently Blocked.</li>
       <li><strong>DL-19</strong> (Reports): Moved to Q2 on Apr 6 — still Highly At Risk.</li>
+      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): Commit Type cleared (was Commit) on Apr 13.</li>
+      <li><strong>DL-9739</strong>: Commit Type cleared (was Out Of Q) on Apr 13.</li>
     </ul>
   </div>
 
@@ -1670,7 +1750,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -1779,6 +1859,13 @@
               <span class="change-to">Q2-2026</span>
               <span class="change-date">Apr 5</span>
             </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">Commit</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">—</span>
+              <span class="change-date">Apr 13</span>
+            </div>
           </td>
         </tr>
 
@@ -1826,6 +1913,13 @@
               <span class="change-arrow">→</span>
               <span class="change-to">Out Of Q</span>
               <span class="change-date">Mar 26</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">Out Of Q</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">—</span>
+              <span class="change-date">Apr 13</span>
             </div>
           </td>
         </tr>
@@ -1881,7 +1975,7 @@
       <li>All 3 Q1 Big Rocks are On Track — no items at risk or out of Q.</li>
       <li><strong>DL-10153</strong> (AI Policy Management — OOTB Policies) and <strong>DL-10156</strong> (OOTB Alerting Policies Catalog) are both Commit, targeting V36.</li>
       <li><strong>DL-10177</strong> (Enterprise AI — Gemini API Integration) is Done as of Apr 5.</li>
-      <li>No items changed Risk Status or Commit Type since Mar 25.</li>
+      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -1894,7 +1988,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -1954,7 +2048,7 @@
           <th>Risk Status</th>
           <th>Commit Type</th>
           <th>Issue Status</th>
-          <th>Changes Since Mar 25</th>
+          <th>Changes Since Apr 9</th>
         </tr>
       </thead>
       <tbody>
@@ -2036,7 +2130,7 @@
 </div><!-- /area-access-trail -->
 
 
-<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 6, 2026</footer>
+<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 15, 2026</footer>
 
 <script>
   function setArea(area) {
