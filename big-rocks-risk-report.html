@@ -2335,7 +2335,7 @@
       // Re-append: active first, done next, won't-do last
       [...otherRows, ...doneRows, ...wontDoRows].forEach(r => tbody.appendChild(r));
 
-      // Collapse Done rows by default and add toggle
+      // Done toggle: insert BEFORE wontDoRows so Done expands above the Won't Do button
       if (doneRows.length) {
         doneRows.forEach(r => r.style.display = 'none');
         const toggleRow = document.createElement('tr');
@@ -2345,10 +2345,13 @@
             <span class="toggle-arrow">▾</span> Show ${doneRows.length} Done
           </button>
         </td>`;
-        tbody.appendChild(toggleRow);
+        // Insert after doneRows, before wontDoRows (if any)
+        wontDoRows.length
+          ? tbody.insertBefore(toggleRow, wontDoRows[0])
+          : tbody.appendChild(toggleRow);
       }
 
-      // Collapse Won't Do rows by default and add toggle
+      // Won't Do toggle: insert BEFORE wontDoRows so they expand below the button
       if (wontDoRows.length) {
         wontDoRows.forEach(r => r.style.display = 'none');
         const wontDoToggleRow = document.createElement('tr');
@@ -2358,7 +2361,7 @@
             <span class="toggle-arrow">▾</span> Show ${wontDoRows.length} Won't Do
           </button>
         </td>`;
-        tbody.appendChild(wontDoToggleRow);
+        tbody.insertBefore(wontDoToggleRow, wontDoRows[0]);
       }
     });
   });
