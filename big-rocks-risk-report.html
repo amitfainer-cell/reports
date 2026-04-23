@@ -81,9 +81,12 @@
     .area-btn .dot.lav    { background: #8270db; }
     .area-btn .dot.lime   { background: #65a30d; }
     .area-btn .dot.sky    { background: #0ea5e9; }
+    .area-btn .dot.steel  { background: #5e6c84; }
 
     .status-badge.blocked { background: #ffe0d6; color: #b92500; }
     .status-badge.blocked::before { background: #b92500; }
+    .status-badge.wont-do { background: #f0f2f5; color: #6b778c; text-decoration: line-through; }
+    .status-badge.wont-do::before { background: #97a0af; }
     .area-count { font-size: 12px; color: #97a0af; margin-left: auto; }
 
     /* ── Area Section ── */
@@ -281,7 +284,7 @@
   </div>
   <div class="card done">
     <div class="label">Done</div>
-    <div class="value">22</div>
+    <div class="value">24</div>
     <div class="sublabel">All areas</div>
   </div>
 </div>
@@ -326,7 +329,10 @@
   <button class="area-btn" data-area="access-trail" onclick="setArea('access-trail')">
     <span class="dot lime"></span>Access Trail
   </button>
-  <span class="area-count" id="area-count">Showing 12 of 12 areas</span>
+  <button class="area-btn" data-area="infrastructure" onclick="setArea('infrastructure')">
+    <span class="dot steel"></span>Infrastructure
+  </button>
+  <span class="area-count" id="area-count">Showing 13 of 13 areas</span>
 </div>
 
 
@@ -433,7 +439,7 @@
 <div class="area-section" id="area-portal">
   <div class="area-header">
     <span class="area-title">Remediation Portal</span>
-    <span class="area-meta">5 epics · 2 Done</span>
+    <span class="area-meta">3 epics · 4 Done</span>
     <span class="area-note">Done items shown below</span>
   </div>
   <div class="area-divider"></div>
@@ -686,7 +692,15 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">On Track</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">At Risk</span>
+              <span class="change-date">Mar 25</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-89230 — At Risk + Out Of Q -->
@@ -1024,7 +1038,22 @@
           </td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">FIX VER</span>
+              <span class="change-from">V36</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">V37</span>
+              <span class="change-date">Mar 25</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 26</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-88693 — Out Of Q -->
@@ -1248,7 +1277,15 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 10</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-87746 — Moved to Q2 -->
@@ -1260,7 +1297,15 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 12</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-88139 — Moved to Q2 -->
@@ -1347,7 +1392,15 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">On Track</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">At Risk</span>
+              <span class="change-date">Mar 25</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-78976 — At Risk -->
@@ -1381,7 +1434,22 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">On Track</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 5</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-92949 — At Risk -->
@@ -1444,7 +1512,15 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Feb 24</span>
+            </div>
+          </td>
         </tr>
 
 
@@ -1553,7 +1629,15 @@
           </td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 31</span>
+            </div>
+          </td>
         </tr>
 
         <!-- DL-12419 — Done -->
@@ -1695,7 +1779,15 @@
           </td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 6</span>
+            </div>
+          </td>
         </tr>
 
         <!-- DL-81 — At Risk -->
@@ -1736,7 +1828,15 @@
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">On Track</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">At Risk</span>
+              <span class="change-date">Mar 25</span>
+            </div>
+          </td>
         </tr>
 
         <!-- DL-7501 — At Risk + Moved to Q2 -->
@@ -1758,6 +1858,13 @@
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
           <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 5</span>
+            </div>
             <div class="change-row">
               <span class="change-type">COMMIT</span>
               <span class="change-from">Commit</span>
@@ -1799,6 +1906,20 @@
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge blocked">Blocked</span></td>
           <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 25</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">Commit</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Out Of Q</span>
+              <span class="change-date">Mar 26</span>
+            </div>
             <div class="change-row">
               <span class="change-type">COMMIT</span>
               <span class="change-from">Out Of Q</span>
@@ -1969,7 +2090,22 @@
           <td><span class="no-change">—</span></td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Mar 26</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">On Track</span>
+              <span class="change-date">Mar 26</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-88712 — Moved to Q2 -->
@@ -2000,7 +2136,116 @@
 </div><!-- /area-access-trail -->
 
 
-<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 15, 2026</footer>
+<!-- ═══════════════════════════════════════════════════════════════
+     AREA 13 — Infrastructure
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="area-section" id="area-infrastructure">
+  <div class="area-header">
+    <span class="area-title">Infrastructure</span>
+    <span class="area-meta">7 epics · 2 in progress · 2 won't do</span>
+  </div>
+  <div class="area-divider"></div>
+
+  <div class="observations-box">
+    <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
+    <ul class="obs-list">
+      <li>All 7 Infrastructure Big Rocks are On Track — no items At Risk.</li>
+      <li><strong>INF-6422</strong> (Staging Environment) and <strong>CY-93176</strong> (Scalable storage for data features) are In Progress targeting Q1/V36.</li>
+      <li><strong>CY-86697</strong> (CCMS direct connection) and <strong>CY-91278</strong> (Service shading – virtual lag) were closed as <strong>Won't Do</strong> — planned but will not be actioned.</li>
+    </ul>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Epic Name</th>
+          <th>Risk Status</th>
+          <th>Commit Type</th>
+          <th>Issue Status</th>
+          <th>Changes Since Apr 9</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- INF-6422 — In Progress -->
+        <tr>
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/INF-6422" target="_blank">INF-6422</a></td>
+          <td><div class="epic-name">Staging Environment</div></td>
+          <td><span class="risk-badge on-track">On Track</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="status-badge in-progress">In Progress</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-93176 — In Progress -->
+        <tr>
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-93176" target="_blank">CY-93176</a></td>
+          <td><div class="epic-name">Scalable storage for data features <span class="vtag v36">V36</span></div></td>
+          <td><span class="risk-badge on-track">On Track</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge in-progress">In Progress</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-83909 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-83909" target="_blank">CY-83909</a></td>
+          <td><div class="epic-name">DB Hotfix migrations workflow</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-85741 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-85741" target="_blank">CY-85741</a></td>
+          <td><div class="epic-name">Kafka enhancement — solve rebalances <span class="vtag v35">V35</span></div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- INF-5781 — Done -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/INF-5781" target="_blank">INF-5781</a></td>
+          <td><div class="epic-name">CI Stability Improvements</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge done">Done</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-86697 — Won't Do -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-86697" target="_blank">CY-86697</a></td>
+          <td><div class="epic-name" style="opacity:0.55;">CCMS direct connection instead of twingate</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge wont-do">Won't Do</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-91278 — Won't Do -->
+        <tr class="done">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-91278" target="_blank">CY-91278</a></td>
+          <td><div class="epic-name" style="opacity:0.55;">Service shading — virtual lag</div></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="no-change">—</span></td>
+          <td><span class="status-badge wont-do">Won't Do</span></td>
+          <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div><!-- /area-infrastructure -->
+
+
+<footer>Cyera &nbsp;·&nbsp; Active Remediation · Remediation Portal · Issues · Access · Platform Infra &amp; Integration · Platform Core · Coverage &amp; Scanning · Data · DLP Agent &amp; Browser Ext · DLP Omni &amp; Platform · DLP AI Protect · Access Trail · Infrastructure &nbsp;·&nbsp; Q1 2026 Big Rocks &nbsp;·&nbsp; At Risk &amp; Out Of Q Report &nbsp;·&nbsp; April 23, 2026</footer>
 
 <script>
   function setArea(area) {
@@ -2011,16 +2256,17 @@
       remediation: 'area-remediation', portal: 'area-portal', issues: 'area-issues',
       access: 'area-access', platform: 'area-platform', 'platform-core': 'area-platform-core',
       scanning: 'area-scanning', data: 'area-data', 'dlp-agent': 'area-dlp-agent',
-      'dlp-omni': 'area-dlp-omni', 'dlp-ai': 'area-dlp-ai', 'access-trail': 'area-access-trail'
+      'dlp-omni': 'area-dlp-omni', 'dlp-ai': 'area-dlp-ai', 'access-trail': 'area-access-trail',
+      infrastructure: 'area-infrastructure'
     };
     const keys = Object.keys(sections);
 
     if (area === 'all') {
       keys.forEach(k => document.getElementById(sections[k]).classList.remove('hidden'));
-      document.getElementById('area-count').textContent = 'Showing 12 of 12 areas';
+      document.getElementById('area-count').textContent = 'Showing 13 of 13 areas';
     } else {
       keys.forEach(k => document.getElementById(sections[k]).classList.toggle('hidden', k !== area));
-      document.getElementById('area-count').textContent = 'Showing 1 of 12 areas';
+      document.getElementById('area-count').textContent = 'Showing 1 of 13 areas';
     }
   }
 
