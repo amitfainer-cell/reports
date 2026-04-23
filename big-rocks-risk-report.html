@@ -237,6 +237,21 @@
       padding: 4px 14px; border-radius: 12px;
       letter-spacing: 0.01em; transition: background 0.15s;
     }
+
+    /* ── Won't Do row toggle ── */
+    .wont-do-toggle-row td {
+      padding: 8px 14px;
+      background: #f7f8f9;
+      border-top: 1px dashed #c1c7d0;
+    }
+    .wont-do-toggle-btn {
+      background: #f0f2f5; color: #5e6c84;
+      border: 1px solid #97a0af; cursor: pointer;
+      font-size: 12px; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 14px; border-radius: 12px;
+      letter-spacing: 0.01em; transition: background 0.15s;
+    }
     .done-toggle-btn:hover { background: #b3efd1; border-color: #1d6b42; }
     .done-toggle-btn .toggle-arrow { font-size: 10px; }
   </style>
@@ -2220,7 +2235,7 @@
         </tr>
 
         <!-- CY-86697 — Won't Do -->
-        <tr class="done">
+        <tr class="wont-do-row">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-86697" target="_blank">CY-86697</a></td>
           <td><div class="epic-name" style="opacity:0.55;">CCMS direct connection instead of twingate</div></td>
           <td><span class="no-change">—</span></td>
@@ -2230,7 +2245,7 @@
         </tr>
 
         <!-- CY-91278 — Won't Do -->
-        <tr class="done">
+        <tr class="wont-do-row">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-91278" target="_blank">CY-91278</a></td>
           <td><div class="epic-name" style="opacity:0.55;">Service shading — virtual lag</div></td>
           <td><span class="no-change">—</span></td>
@@ -2293,34 +2308,58 @@
       : `<span class="toggle-arrow">▾</span> Show ${count} Done`;
   }
 
+  function toggleWontDo(btn) {
+    const tbody = btn.closest('tbody');
+    const wontDoRows = tbody.querySelectorAll('tr.wont-do-row');
+    const count = wontDoRows.length;
+    const isHidden = wontDoRows[0].style.display === 'none';
+    wontDoRows.forEach(r => r.style.display = isHidden ? '' : 'none');
+    btn.innerHTML = isHidden
+      ? `<span class="toggle-arrow">▴</span> Hide ${count} Won't Do`
+      : `<span class="toggle-arrow">▾</span> Show ${count} Won't Do`;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.area-section').forEach(section => {
       const tbody = section.querySelector('tbody');
       if (!tbody) return;
 
       const rows = Array.from(tbody.querySelectorAll('tr'));
-      const doneRows  = rows.filter(r => r.classList.contains('done'));
-      const otherRows = rows.filter(r => !r.classList.contains('done'));
+      const doneRows    = rows.filter(r => r.classList.contains('done'));
+      const wontDoRows  = rows.filter(r => r.classList.contains('wont-do-row'));
+      const otherRows   = rows.filter(r => !r.classList.contains('done') && !r.classList.contains('wont-do-row'));
 
       // Sort non-done rows by Commit Type: Commit → Stretch → Out Of Q → Moved to Q2
       otherRows.sort((a, b) => getCommitPriority(a) - getCommitPriority(b));
 
-      // Re-append: non-done first, done at the bottom
-      [...otherRows, ...doneRows].forEach(r => tbody.appendChild(r));
+      // Re-append: active first, done next, won't-do last
+      [...otherRows, ...doneRows, ...wontDoRows].forEach(r => tbody.appendChild(r));
 
-      // Collapse Done rows by default
-      if (!doneRows.length) return;
-      doneRows.forEach(r => r.style.display = 'none');
+      // Collapse Done rows by default and add toggle
+      if (doneRows.length) {
+        doneRows.forEach(r => r.style.display = 'none');
+        const toggleRow = document.createElement('tr');
+        toggleRow.className = 'done-toggle-row';
+        toggleRow.innerHTML = `<td colspan="6">
+          <button class="done-toggle-btn" onclick="toggleDone(this)">
+            <span class="toggle-arrow">▾</span> Show ${doneRows.length} Done
+          </button>
+        </td>`;
+        tbody.appendChild(toggleRow);
+      }
 
-      // Append toggle button row at the bottom
-      const toggleRow = document.createElement('tr');
-      toggleRow.className = 'done-toggle-row';
-      toggleRow.innerHTML = `<td colspan="6">
-        <button class="done-toggle-btn" onclick="toggleDone(this)">
-          <span class="toggle-arrow">▾</span> Show ${doneRows.length} Done
-        </button>
-      </td>`;
-      tbody.appendChild(toggleRow);
+      // Collapse Won't Do rows by default and add toggle
+      if (wontDoRows.length) {
+        wontDoRows.forEach(r => r.style.display = 'none');
+        const wontDoToggleRow = document.createElement('tr');
+        wontDoToggleRow.className = 'wont-do-toggle-row';
+        wontDoToggleRow.innerHTML = `<td colspan="6">
+          <button class="wont-do-toggle-btn" onclick="toggleWontDo(this)">
+            <span class="toggle-arrow">▾</span> Show ${wontDoRows.length} Won't Do
+          </button>
+        </td>`;
+        tbody.appendChild(wontDoToggleRow);
+      }
     });
   });
 </script>
