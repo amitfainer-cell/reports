@@ -602,7 +602,7 @@
 <div class="area-section" id="area-issues">
   <div class="area-header">
     <span class="area-title">Issues</span>
-    <span class="area-meta">7 epics · 3 needing attention</span>
+    <span class="area-meta">7 epics · 1 needing attention</span>
     <span class="area-note">On Track items hidden</span>
   </div>
   <div class="area-divider"></div>
@@ -610,10 +610,9 @@
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li><strong>CY-87678</strong> (On-Prem MIP Policy for Remediation): At Risk due to on-prem team gaps and resource constraints — targeting V35 hotfix or V36.</li>
-      <li><strong>CY-87815</strong> (Object Sensitivity): At Risk — design decisions delayed work to V36, effort estimation still in progress with the data team.</li>
-      <li><strong>CY-89586</strong> (Policies for M365 Retention Labels): moved Out Of Q — removed from the quarter.</li>
-      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
+      <li><strong>CY-87678</strong> (On-Prem MIP Policy for Remediation): improved <strong>At Risk → On Track</strong> (Apr 22). On-prem gaps resolved.</li>
+      <li><strong>CY-87815</strong> (Object Sensitivity): improved <strong>At Risk → On Track</strong> (Apr 22). Effort estimation completed.</li>
+      <li><strong>CY-89586</strong> (Policies for M365 Retention Labels): Out Of Q — removed from the quarter.</li>
     </ul>
   </div>
 
@@ -631,46 +630,62 @@
       </thead>
       <tbody>
 
-        <!-- CY-87678 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-87678 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-87678" target="_blank">CY-87678</a></td>
           <td>
             <div class="epic-name">On-Prem MIP Policy for Remediation</div>
-            <div class="risk-comment">Need on-prem team to close gaps &amp; provide a testing environment. Due to resource limitations and higher-priority tasks, MIP on-prem will be released as a hotfix in V35 or as part of V36.</div>
+            <div class="risk-comment">On-prem gaps and resource constraints resolved.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Feb 22</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- CY-87815 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-87815 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-87815" target="_blank">CY-87815</a></td>
           <td>
             <div class="epic-name">[Data] Issues: Support Object Sensitivity</div>
-            <div class="risk-comment">Due to design discussions, work postponed to V36. Working with data team on effort estimation. Pending final definition.</div>
+            <div class="risk-comment">Design discussions resolved, effort estimation completed with data team.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 02</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-89586 — Out Of Q -->
@@ -698,7 +713,7 @@
 <div class="area-section" id="area-access">
   <div class="area-header">
     <span class="area-title">Access</span>
-    <span class="area-meta">6 epics · 4 needing attention</span>
+    <span class="area-meta">6 epics · 3 needing attention</span>
     <span class="area-note">On Track items hidden</span>
   </div>
   <div class="area-divider"></div>
@@ -706,7 +721,7 @@
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li><strong>CY-97178</strong> (Unified identities with DLP): Pushing at full speed — Access lead confirmed no V37 slip, but needs support from Inbal Ketzef to close open ends. Added in previous update as part of unified Platform.</li>
+      <li><strong>CY-97178</strong> (Unified identities with DLP): improved <strong>At Risk → On Track</strong> (Apr 20). Access lead confirmed delivery on track.</li>
       <li><strong>CY-89238</strong> (Granular Permissions filters): Commit Type downgraded Stretch → Out Of Q on Apr 12 — de-prioritized due to capacity spillover (DLP unification, Salesforce access, etc.).</li>
       <li><strong>CY-89230</strong> (Unused Permissions): explicitly moved to Q2-2026 on Apr 12. <strong>CY-89239</strong> (GWS NHIs) also Out Of Q — capacity and dependency constraints.</li>
     </ul>
@@ -726,24 +741,24 @@
       </thead>
       <tbody>
 
-        <!-- CY-97178 — At Risk (RECENT CHANGE) -->
-        <tr class="at-risk">
+        <!-- CY-97178 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-97178" target="_blank">CY-97178</a></td>
           <td>
             <div class="epic-name">Unified identities with DLP</div>
-            <div class="risk-comment">Tight schedule with holidays and Israel situation.</div>
+            <div class="risk-comment">Delivery confirmed on track. Schedule concerns resolved.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 25</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 20</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
-          <td><span class="status-badge to-do">To Do</span></td>
+          <td><span class="status-badge in-progress">In Progress</span></td>
           <td class="changed-cell">
             <div class="change-row">
               <span class="change-type">RISK</span>
@@ -751,6 +766,13 @@
               <span class="change-arrow">→</span>
               <span class="change-to">At Risk</span>
               <span class="change-date">Mar 25</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 20</span>
             </div>
           </td>
         </tr>
@@ -846,7 +868,7 @@
 <div class="area-section" id="area-platform">
   <div class="area-header">
     <span class="area-title">Platform Infra &amp; Integration</span>
-    <span class="area-meta">18 epics · 3 needing attention</span>
+    <span class="area-meta">18 epics · 1 needing attention</span>
     <span class="area-note">On Track items hidden</span>
   </div>
   <div class="area-divider"></div>
@@ -854,11 +876,10 @@
   <div class="observations-box">
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
-      <li><strong>CY-63296</strong> (Integrations Page Infra Phase 2) &amp; <strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): Both moved to At Risk on Mar 23 — Cohesity integration and OCTO implementation are the blockers for V36.</li>
+      <li><strong>CY-63296</strong> (Integrations Page Infra Phase 2): improved <strong>At Risk → On Track</strong> (Apr 23).</li>
+      <li><strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): improved <strong>At Risk → On Track</strong> (Apr 17) — already moved to Q2-2026 on Apr 14.</li>
       <li><strong>CY-89471</strong> (In-Platform Roles &amp; Permissions): Out Of Q — PM lead confirmed this was not mandatory for FedRAMP Q1; Cognito backend support is sufficient for Q1 scope.</li>
       <li><strong>CY-91083</strong> (DSPM&lt;&gt;DLP Unification – Navigation Menu) moved to Done on Apr 5 (V36).</li>
-      <li><strong>CY-29226</strong> (Backup &amp; Recovery Enrichment): Fix version cleared (V36 → —) and explicitly moved to Q2-2026 on Apr 14.</li>
-      <li>No other items changed Risk Status or Commit Type since Apr 9.</li>
     </ul>
   </div>
 
@@ -876,41 +897,49 @@
       </thead>
       <tbody>
 
-        <!-- CY-63296 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-63296 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-63296" target="_blank">CY-63296</a></td>
           <td>
             <div class="epic-name">Integrations Page Infra Phase 2 — OCTO Built Integrations</div>
-            <div class="risk-comment">V36 scope is to complete the design; risk is with the implementation of the OCTO integrations into the new infra.</div>
+            <div class="risk-comment">OCTO integration design risk resolved.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 23</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 23</span>
             </div>
           </td>
           <td><span class="commit-badge stretch">Stretch</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 23</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- CY-29226 — At Risk + moved to Q2 -->
-        <tr class="at-risk">
+        <!-- CY-29226 — improved to On Track (Q2) -->
+        <tr>
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-29226" target="_blank">CY-29226</a></td>
           <td>
             <div class="epic-name">Generic Third Party Datastore Enrichment — Backup &amp; Recovery</div>
-            <div class="risk-comment">Cohesity integration at risk — fix version cleared and moved to Q2-2026 on Apr 14.</div>
+            <div class="risk-comment">Risk resolved — moved to Q2-2026 on Apr 14. On Track for Q2 delivery.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 23</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 17</span>
             </div>
           </td>
           <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
@@ -929,6 +958,13 @@
               <span class="change-arrow">→</span>
               <span class="change-to">Q2-2026</span>
               <span class="change-date">Apr 14</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 17</span>
             </div>
           </td>
         </tr>
@@ -1142,7 +1178,7 @@
 <div class="area-section" id="area-scanning">
   <div class="area-header">
     <span class="area-title">Coverage &amp; Scanning</span>
-    <span class="area-meta">22 epics · 10 needing attention</span>
+    <span class="area-meta">22 epics · 9 needing attention</span>
     <span class="area-note">On Track items hidden</span>
   </div>
   <div class="area-divider"></div>
@@ -1156,6 +1192,7 @@
       <li><strong>CY-88072</strong> (File Flow Scale 250M/day) &amp; <strong>CY-88135</strong> (Confluence EA): At Risk — pending Core team dependency and no allocated classifier resources respectively.</li>
       <li><strong>CY-88111</strong> (AI Security Dashboard): At Risk since Mar 15.</li>
       <li><strong>3 epics moved to Q2</strong>: CY-65010 (Airtable — waiting on Netflix inputs), CY-87746 (On-Prem Move to Quarantine), CY-88139 (ServiceNow email to ticket owner).</li>
+      <li><strong>CY-88135</strong> (Confluence EA): improved <strong>At Risk → On Track</strong> (Apr 23). Classifier resource risk resolved.</li>
     </ul>
   </div>
 
@@ -1298,25 +1335,33 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-88135 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-88135 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-88135" target="_blank">CY-88135</a></td>
           <td>
             <div class="epic-name">Confluence coverage — EA</div>
-            <div class="risk-comment">No allocated classifier resources in case they are needed based on Beta data.</div>
+            <div class="risk-comment">Classifier resource concern resolved — Beta data did not require additional resources.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Jan 21</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 23</span>
             </div>
           </td>
           <td><span class="commit-badge stretch">Stretch</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 23</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-65010 — Moved to Q2 -->
@@ -1394,7 +1439,7 @@
 <div class="area-section" id="area-data">
   <div class="area-header">
     <span class="area-title">Data</span>
-    <span class="area-meta">34 epics · 6 needing attention</span>
+    <span class="area-meta">34 epics · 5 needing attention</span>
     <span class="area-note">On Track items hidden</span>
   </div>
   <div class="area-divider"></div>
@@ -1403,10 +1448,10 @@
     <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
     <ul class="obs-list">
       <li><strong>CY-92936</strong> (Support Custom Policies &amp; Customization): Moved to At Risk Mar 25 — feature will be delivered but scope may be reduced; previously pushed from V35 to V36 due to reprioritization.</li>
-      <li><strong>CY-78976</strong> ([Data] Geo and Role Customization): At Risk — core classification migration completed; data integrity fixes in hotfix; existing policies migration at risk due to 3 FTEs in reserves with potential revert. Checking if Platform team can add backwards compatibility.</li>
+      <li><strong>CY-78976</strong> ([Data] Geo and Role Customization): improved <strong>At Risk → On Track</strong> (Apr 22). Policy migration risk resolved.</li>
       <li><strong>CY-93229</strong> (Structured Geo Residency Model) appears On Track in Jira but PM flagged as likely delayed to hotfix V36. <strong>CY-95719</strong> ([Data] Role Customization) appears On Track in Jira but PM confirmed release delayed to V37.</li>
       <li><strong>CY-92947</strong> (AI-Severity Outpost): Moved to Q2 on Apr 5 — risk improved to On Track, design concerns resolved for now.</li>
-      <li><strong>CY-92949</strong> (Policy External Identity): At Risk — dependency on Access team planned for June 26, which may not leave enough time.</li>
+      <li><strong>CY-92949</strong> (Policy External Identity): escalated <strong>At Risk → Highly At Risk</strong> (Apr 22) — Access team dependency for June 26 confirmed too late for Q1 delivery.</li>
       <li><strong>CY-92996</strong> (FeedbackLoop finish indicator): <strong>Escalated to Highly At Risk on Apr 9</strong> — Platform sprint not yet allocated; potential technical issues with providing the finish indicator.</li>
       <li><strong>CY-93213</strong> (Full Parity for 5 Existing Languages): Moved Q1-2026 → Q2-2026 on Feb 24; fix version updated to V38; commit downgraded to Design.</li>
     </ul>
@@ -1455,25 +1500,33 @@
           </td>
         </tr>
 
-        <!-- CY-78976 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-78976 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-78976" target="_blank">CY-78976</a></td>
           <td>
             <div class="epic-name">[Data] Geo and Role Customization</div>
-            <div class="risk-comment">Classification migration completed. Existing Policies migration at risk: 3 FTEs in reserves, potential need for revert. Checking if Platform team can add backwards compatibility.</div>
+            <div class="risk-comment">Policy migration risk resolved — backwards compatibility approach confirmed.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Mar 2</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-92947 — Moved to Q2 -->
@@ -1504,25 +1557,33 @@
           </td>
         </tr>
 
-        <!-- CY-92949 — At Risk -->
-        <tr class="at-risk">
+        <!-- CY-92949 — escalated to Highly At Risk -->
+        <tr class="highly-at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-92949" target="_blank">CY-92949</a></td>
           <td>
             <div class="epic-name">Policy External Identity</div>
-            <div class="risk-comment">Dependency on Access team planned for June 26, which may not leave enough time to deliver.</div>
+            <div class="risk-comment">Access team dependency confirmed for June 26 — not enough time for Q1 delivery.</div>
           </td>
           <td>
-            <span class="risk-badge at-risk">At Risk</span>
+            <span class="risk-badge highly-at-risk">Highly At Risk</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">At Risk</span>
-              <span class="rc-date">Feb 24</span>
+              <span class="rc-to">Highly At Risk</span>
+              <span class="rc-date">Apr 22</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Highly At Risk</span>
+              <span class="change-date">Apr 22</span>
+            </div>
+          </td>
         </tr>
 
         <!-- CY-92996 — Highly At Risk (escalated Apr 9) -->
@@ -1790,12 +1851,11 @@
     <ul class="obs-list">
       <li><strong>DL-19</strong> (Reports): Highly At Risk, Stretch — included in planning as stretch but currently not realistic.</li>
       <li><strong>DL-81</strong> (Memories / feedback management) &amp; <strong>DL-9974</strong> (Policy Versioning phase 1): Both moved to At Risk Mar 24–25 (RECENT) — design and research started late, may slip slightly past EoQ.</li>
-      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): At Risk since Feb 13 — moved to Q2 on Apr 5; commit restored to Commit.</li>
-      <li><strong>DL-11381</strong> (Filter based RBAC — projects): At Risk since Mar 9 — per PM (Alex Feldman / Ketzef): unrelated to unified Platform EA, does not affect it, and is not a blocker.</li>
-      <li><strong>DL-9739</strong> (Automatic creation of enforcement policy recommendations): Moved to Q2 — currently Blocked.</li>
       <li><strong>DL-19</strong> (Reports): Moved to Q2 on Apr 6 — still Highly At Risk.</li>
-      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): Commit Type cleared (was Commit) on Apr 13.</li>
-      <li><strong>DL-9739</strong>: Commit Type cleared (was Out Of Q) on Apr 13.</li>
+      <li><strong>DL-7501</strong> (Deploy policy to Zscaler): Commit Type restored to Commit (Apr 26) — still At Risk, Q2-2026.</li>
+      <li><strong>DL-11381</strong> (Filter based RBAC): moved to Q2-2026 (Apr 21) — still At Risk.</li>
+      <li><strong>DL-9974</strong> (Policy Versioning phase 1): moved to Q2-2026 (Apr 25) — still At Risk.</li>
+      <li><strong>DL-9739</strong> (Enforcement policy recommendations): Commit Type restored to Commit, Risk improved to On Track (Apr 26) — Q2-2026, still Blocked.</li>
     </ul>
   </div>
 
@@ -1863,7 +1923,7 @@
           <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- DL-9974 — At Risk (RECENT) -->
+        <!-- DL-9974 — At Risk + moved to Q2 -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-9974" target="_blank">DL-9974</a></td>
           <td>
@@ -1878,7 +1938,7 @@
               <span class="rc-date">Mar 25</span>
             </div>
           </td>
-          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1887,6 +1947,13 @@
               <span class="change-arrow">→</span>
               <span class="change-to">At Risk</span>
               <span class="change-date">Mar 25</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 25</span>
             </div>
           </td>
         </tr>
@@ -1924,15 +1991,22 @@
               <span class="change-to">—</span>
               <span class="change-date">Apr 13</span>
             </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">—</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Commit</span>
+              <span class="change-date">Apr 26</span>
+            </div>
           </td>
         </tr>
 
-        <!-- DL-11381 — At Risk -->
+        <!-- DL-11381 — At Risk + moved to Q2 -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-11381" target="_blank">DL-11381</a></td>
           <td>
             <div class="epic-name">Filter based RBAC (projects)</div>
-            <div class="risk-comment">PM confirmed: unrelated to unified Platform EA, does not affect it, and is not a blocker. Will update timeline when PoC is done.</div>
+            <div class="risk-comment">PM confirmed: unrelated to unified Platform EA. PoC completed — moved to Q2-2026.</div>
           </td>
           <td>
             <span class="risk-badge at-risk">At Risk</span>
@@ -1943,19 +2017,27 @@
               <span class="rc-date">Mar 9</span>
             </div>
           </td>
-          <td><span class="commit-badge committed">Commit</span></td>
+          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">CURR Q</span>
+              <span class="change-from">Q1-2026</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Q2-2026</span>
+              <span class="change-date">Apr 21</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- DL-9739 — Moved to Q2 (RECENT) -->
-        <tr class="out-of-q">
+        <!-- DL-9739 — Moved to Q2, Commit restored, On Track -->
+        <tr>
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/DL-9739" target="_blank">DL-9739</a></td>
           <td>
             <div class="epic-name">Automatic creation of enforcement policy recommendations</div>
           </td>
-          <td><span class="no-change">—</span></td>
-          <td><span class="commit-badge moved-to-q2">Moved to Q2</span></td>
+          <td><span class="risk-badge on-track">On Track</span></td>
+          <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge blocked">Blocked</span></td>
           <td class="changed-cell">
             <div class="change-row">
@@ -1978,6 +2060,13 @@
               <span class="change-arrow">→</span>
               <span class="change-to">—</span>
               <span class="change-date">Apr 13</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">—</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">Commit</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 26</span>
             </div>
           </td>
         </tr>
