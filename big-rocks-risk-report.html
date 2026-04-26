@@ -266,7 +266,7 @@
   </div>
   <div class="header-right">
     <span class="quarter-badge">Q1 2026</span>
-    <span class="generated">Generated: April 15, 2026</span>
+    <span class="generated">Generated: April 26, 2026</span>
   </div>
 </header>
 
@@ -357,17 +357,18 @@
 <div class="area-section" id="area-remediation">
   <div class="area-header">
     <span class="area-title">Active Remediation</span>
-    <span class="area-meta">6 epics · 3 needing attention</span>
-    <span class="area-note">On Track items hidden</span>
+    <span class="area-meta">4 epics · 2 At Risk · 1 Out Of Q</span>
+    <span class="area-note">On Track items shown with change indicator</span>
   </div>
   <div class="area-divider"></div>
 
   <div class="observations-box">
-    <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations</span></div>
+    <div class="obs-header"><span class="obs-icon">🔍</span><span class="obs-title">Key Observations — Updated Apr 26</span></div>
     <ul class="obs-list">
-      <li><strong>CY-89063 &amp; CY-89061</strong> are both Highly At Risk — SaaSy team resource constraints and open infra questions are the blockers.</li>
-      <li><strong>CY-79531</strong> is in active testing but slipped V35 — feature-flagged off, targeting V36 completion.</li>
-      <li>No items changed Risk Status or Commit Type since Apr 9.</li>
+      <li><strong>CY-89061</strong> improved: Highly At Risk → <strong>On Track</strong> (Apr 22). Resource and infra blockers resolved.</li>
+      <li><strong>CY-89063</strong> confirmed Out Of Q: Commit Type changed Stretch → Out Of Q (Apr 22). SaaSy team resource constraints preclude Q1 delivery.</li>
+      <li><strong>CY-79531</strong> still At Risk: released public &amp; org-wide remediation; offending identities delivery now expected after V36 (V36 cutoff: Apr 26).</li>
+      <li><strong>CY-100429</strong> (M365 Generic Remediation Infra Migration) newly tracked — Stretch / At Risk, in progress. Owner: Amiad Zaretsky.</li>
     </ul>
   </div>
 
@@ -385,54 +386,69 @@
       </thead>
       <tbody>
 
-        <!-- CY-89061 — Highly At Risk -->
-        <tr class="highly-at-risk">
+        <!-- CY-89061 — improved to On Track -->
+        <tr class="done">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89061" target="_blank">CY-89061</a></td>
           <td>
             <div class="epic-name">[Support] — On-Prem MIP Labels</div>
-            <div class="risk-comment">Due to some resource limitations and a few open questions (e.g. if remediation feedback is by datascan, it requires tasks in the remediation infra).</div>
+            <div class="risk-comment">Blockers resolved. Resource constraints and infra questions addressed.</div>
           </td>
           <td>
-            <span class="risk-badge highly-at-risk">Highly At Risk</span>
+            <span class="risk-badge on-track">On Track</span>
             <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
+              <span class="rc-from">Highly At Risk</span>
               <span class="rc-arrow">→</span>
-              <span class="rc-to">Highly At Risk</span>
-              <span class="rc-date">Feb 03</span>
+              <span class="rc-to" style="color:#36b37e">On Track</span>
+              <span class="rc-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
             </div>
           </td>
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">Highly At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to" style="color:#36b37e">On Track</span>
+              <span class="change-date" style="background:#dcf5e7;color:#1d6b42">Apr 22</span>
+            </div>
+          </td>
         </tr>
 
-        <!-- CY-89063 — Highly At Risk -->
-        <tr class="highly-at-risk">
+        <!-- CY-89063 — Out Of Q -->
+        <tr class="out-of-q">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-89063" target="_blank">CY-89063</a></td>
           <td>
             <div class="epic-name">[Support] — Purge Email</div>
-            <div class="risk-comment">Highly at risk due to SaaSy team resources.</div>
+            <div class="risk-comment">SaaSy team resource constraints confirmed — moved Out Of Q for Q1.</div>
           </td>
-          <td>
-            <span class="risk-badge highly-at-risk">Highly At Risk</span>
-            <div class="risk-change-line">
-              <span class="rc-from">On Track</span>
-              <span class="rc-arrow">→</span>
-              <span class="rc-to">Highly At Risk</span>
-              <span class="rc-date">Mar 09</span>
+          <td><span class="no-change">—</span></td>
+          <td><span class="commit-badge out-of-q">Out Of Q</span></td>
+          <td><span class="status-badge to-do">To Do</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">RISK</span>
+              <span class="change-from">Highly At Risk</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">On Track</span>
+              <span class="change-date">Apr 22</span>
+            </div>
+            <div class="change-row">
+              <span class="change-type">COMMIT</span>
+              <span class="change-from">Stretch</span>
+              <span class="change-arrow">→</span>
+              <span class="change-to">Out Of Q</span>
+              <span class="change-date">Apr 22</span>
             </div>
           </td>
-          <td><span class="commit-badge stretch">Stretch</span></td>
-          <td><span class="status-badge to-do">To Do</span></td>
-          <td class="changed-cell"><span class="no-change">—</span></td>
         </tr>
 
-        <!-- CY-79531 — At Risk -->
+        <!-- CY-79531 — At Risk (no change) -->
         <tr class="at-risk">
           <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-79531" target="_blank">CY-79531</a></td>
           <td>
             <div class="epic-name">[Implementation] GWS Access Remediation</div>
-            <div class="risk-comment">2 weeks behind schedule, currently in testing. First capability was supposed to be in V35 — FF turned off until test plan is complete.</div>
+            <div class="risk-comment">Released public &amp; org-wide remediation. Offending identities expected after V36 — V36 cutoff: Apr 26.</div>
           </td>
           <td>
             <span class="risk-badge at-risk">At Risk</span>
@@ -440,6 +456,27 @@
           <td><span class="commit-badge committed">Commit</span></td>
           <td><span class="status-badge in-progress">In Progress</span></td>
           <td class="changed-cell"><span class="no-change">—</span></td>
+        </tr>
+
+        <!-- CY-100429 — New: Stretch / At Risk -->
+        <tr class="at-risk">
+          <td><a class="key-link" href="https://cyera.atlassian.net/browse/CY-100429" target="_blank">CY-100429</a></td>
+          <td>
+            <div class="epic-name">M365 Generic Remediation Infra Migration</div>
+            <div class="risk-comment">Added to Q in Apr 9 update. Owner: Amiad Zaretsky. V36 target — Stretch commitment.</div>
+          </td>
+          <td>
+            <span class="risk-badge at-risk">At Risk</span>
+          </td>
+          <td><span class="commit-badge stretch">Stretch</span></td>
+          <td><span class="status-badge in-progress">In Progress</span></td>
+          <td class="changed-cell">
+            <div class="change-row">
+              <span class="change-type">NEW</span>
+              <span class="change-to">Added to Q</span>
+              <span class="change-date">Apr 9</span>
+            </div>
+          </td>
         </tr>
 
       </tbody>
